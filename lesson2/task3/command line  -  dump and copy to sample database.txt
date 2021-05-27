@@ -1,0 +1,101 @@
+C:\Users\User>mysqldump example > example.sql
+
+C:\Users\User>dir
+ Том в устройстве C имеет метку Windows8_OS
+ Серийный номер тома: 304C-98F0
+
+ Содержимое папки C:\Users\User
+
+26.05.2021  19:56    <DIR>          .
+26.05.2021  19:56    <DIR>          ..
+21.04.2021  14:06    <DIR>          .android
+30.01.2021  10:15             3 357 .bash_history
+25.05.2021  19:40    <DIR>          .eclipse
+26.01.2021  19:53               158 .gitconfig
+13.02.2021  14:10    <DIR>          .gradle
+23.05.2021  17:05               166 .packettracer
+27.01.2021  07:41    <DIR>          .ssh
+27.01.2021  16:49             2 151 .viminfo
+16.05.2021  13:31    <DIR>          .VirtualBox
+25.09.2020  08:45    <DIR>          3D Objects
+19.11.2013  20:38                 0 agent.log
+22.03.2021  18:01    <DIR>          AndroidStudioProjects
+11.04.2019  21:48    <DIR>          ansel
+26.01.2021  19:19                 0 changes.txt
+26.04.2021  21:55    <DIR>          Cisco Packet Tracer 8.0
+25.09.2020  08:45    <DIR>          Contacts
+26.05.2021  17:50    <DIR>          Desktop
+19.05.2021  09:47    <DIR>          Documents
+26.05.2021  17:50    <DIR>          Downloads
+27.01.2021  13:24    <DIR>          Dropbox
+26.05.2021  19:56             1 927 example.sql
+25.09.2020  08:45    <DIR>          Favorites
+10.10.2015  16:16                68 file.err
+10.10.2015  16:17               246 file.log
+12.08.2017  13:52    <DIR>          Intel
+25.09.2020  08:45    <DIR>          Links
+25.09.2020  08:45    <DIR>          Music
+25.05.2021  19:32    <DIR>          OneDrive
+25.09.2020  08:45    <DIR>          Pictures
+26.01.2021  19:20    <DIR>          project
+03.02.2021  18:58    <DIR>          PycharmProjects
+26.01.2021  19:19                 0 readme.md
+22.09.2016  23:08    <DIR>          Roaming
+17.04.2021  12:11    <DIR>          Saved Games
+25.09.2020  08:45    <DIR>          Searches
+10.01.2021  23:12    <DIR>          source
+24.04.2015  21:07    <DIR>          Tracing
+25.09.2020  08:45    <DIR>          Videos
+07.04.2021  18:40    <DIR>          VirtualBox VMs
+              10 файлов          8 073 байт
+              31 папок   6 491 480 064 байт свободно
+
+C:\Users\User>
+C:\Users\User>mysql
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 43
+Server version: 8.0.25 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database sample;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> exit
+Bye
+
+C:\Users\User>mysql sample < example.sql
+
+C:\Users\User>mysql
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 45
+Server version: 8.0.25 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use sample;
+Database changed
+mysql> show tables;
++------------------+
+| Tables_in_sample |
++------------------+
+| users            |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> exit
+Bye
+
+C:\Users\User>dir
