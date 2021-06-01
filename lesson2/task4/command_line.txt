@@ -1,0 +1,1 @@
+C:\Users\User>mysqldump mysql help_keyword --where="100" >100lines_of_help_jeyword.sql
